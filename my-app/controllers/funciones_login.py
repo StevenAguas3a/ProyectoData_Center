@@ -81,9 +81,8 @@ def procesar_update_perfil(data_form,id):
     apellido_usuario = data_form['surname']
     id_area = data_form['selectArea']
     id_rol= data_form['selectRol']
-    id_rol= data_form['selectRol']
+    estado_civil= data_form['estado_civil']
     new_pass_user = data_form['new_pass_user']
-    estado_civil = data_form['estado_civil']
 
     
 
@@ -100,7 +99,7 @@ def procesar_update_perfil(data_form,id):
                             apellido_usuario = %s,
                             id_area = %s,
                             id_rol = %s,
-                            password = %s
+                            password = %s,
                             estado_civil = %s
                         WHERE id_usuario = %s
                     """
