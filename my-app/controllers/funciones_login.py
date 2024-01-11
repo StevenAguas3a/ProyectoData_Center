@@ -81,7 +81,7 @@ def procesar_update_perfil(data_form,id):
     apellido_usuario = data_form['surname']
     id_area = data_form['selectArea']
     id_rol= data_form['selectRol']
-    estado_civil= data_form['estado_civil']
+    estado_civil = data_form['estado_civil']
     new_pass_user = data_form['new_pass_user']
 
     
@@ -145,7 +145,7 @@ def procesar_update_perfil(data_form,id):
                                                 apellido_usuario = %s,
                                                 id_area = %s,
                                                 password = %s,
-                                                estado_civil= %s
+                                                estado_civil = %s
                                             WHERE id_usuario = %s
                                         """
                                         params = (nombre_usuario,apellido_usuario, id_area,
@@ -173,10 +173,10 @@ def updatePefilSinPass(id_user, nombre_usuario, apellido_usuario, id_area, id_ro
                         apellido_usuario = %s,
                         id_area = %s,
                         id_rol = %s,
-                        estado_civil= %s
+                        estado_civil = %s
                     WHERE id_usuario = %s
                 """
-                params = ( nombre_usuario, apellido_usuario, id_area, id_rol,estado_civil, id_user)
+                params = ( nombre_usuario, apellido_usuario, id_area, id_rol, estado_civil, id_user)
                 cursor.execute(querySQL, params)
                 conexion_MySQLdb.commit()
         return cursor.rowcount
