@@ -82,7 +82,9 @@ def procesar_update_perfil(data_form,id):
     id_area = data_form['selectArea']
     id_rol= data_form['selectRol']
     estado_civil = data_form['estado_civil']
+    
     new_pass_user = data_form['new_pass_user']
+
 
     
 

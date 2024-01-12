@@ -37,15 +37,6 @@
               required />
           </div>
           <div class="mb-3">
-            <label for="name" class="form-label">Estado Civil</label>
-            <input
-              type="text"
-              name="name"
-              value="{{ info_perfil_session[0]['estado_civil'] }}"
-              class="form-control"
-              required />
-          </div>
-          <div class="mb-3">
             <label for="surname" class="form-label">Apellido</label>
             <input
               class="form-control"
@@ -54,6 +45,14 @@
               value="{{ info_perfil_session[0]['apellido_usuario'] }}"
               />
           </div>
+          <div class="mb-3">
+            <label for="estado_civil" class="form-label">estado_civil</label>
+            <input
+              class="form-control"
+              type="text"
+              name="estado_civil"
+              value="{{ info_perfil_session[0]['estado_civil'] }}"
+              />
           <div>
             <label for="area" class="form-label">Area</label>
             <select class="form-select" name="selectArea" {%if dataLogin.rol == 2 %} disabled {%endif%}>
